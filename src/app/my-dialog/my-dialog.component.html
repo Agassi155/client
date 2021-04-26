@@ -1,0 +1,12 @@
+<p></p>
+
+
+<mat-dialog-content>
+  <p>Voulez vous supprimer ?</p>
+<p> le client N : {{data.client}}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+     <button mat-button (click)="annuler()">Annuler</button>
+     <button mat-raised-button (click)="confirmer()">Valider</button>
+</mat-dialog-actions>

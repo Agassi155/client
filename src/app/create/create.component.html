@@ -1,0 +1,48 @@
+
+
+<div class="container">
+    <p class="h3">Information client</p>
+  <form  #formulaire="ngForm"   (ngSubmit)="create_client(formulaire.value)">
+
+    <div class="form-group">
+        <div>
+          <label for="name">Nom :</label>
+          <input name="nom" type="text" [(ngModel)]="client2.nom"  required class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div>
+          <label for="mail">Situation :</label>
+          <input type="text" name="situation" [(ngModel)]="client2.situation" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div>
+        <input type="checkbox" name="etat" [(ngModel)]="client2.etat" class="form-check-input">
+        <label for="actif">Actif</label><br>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div>
+        <label for="mail">Sexe:</label>
+        <div class="form-check">
+          <input  type="radio" value="homme" [(ngModel)]="client2.sexe" name="sexe">
+          <label for="male">Homme</label>
+        </div>
+        <div class="form-check">
+          <input  type="radio" value="femme" [(ngModel)]="client2.sexe"  name="sexe" >
+        <label for="female">Femme</label>
+        </div>
+
+      </div>
+
+    </div>
+    <button type="submit" [disabled]="!formulaire.valid" class="btn btn-primary">Creer</button>
+
+  </form>
+{{error_message}}
+
+</div>
